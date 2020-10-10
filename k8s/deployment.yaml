@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: portal
-        image: portal:0.1.0
+        image: portal:0.2.0
         ports:
           - containerPort: 80
         env:
@@ -24,6 +24,8 @@ spec:
           value: "80"
         - name: NODE_ENV
           value: "production"
+        - name: VERSION
+          value: 0.2.0
         resources:
           requests:
             memory: "64Mi"

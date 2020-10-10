@@ -24,6 +24,8 @@ spec:
           value: "80"
         - name: NODE_ENV
           value: "production"
+        - name: VERSION
+          value: $VERSION
         resources:
           requests:
             memory: "64Mi"
