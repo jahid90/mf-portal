@@ -1,0 +1,9 @@
+{
+    "version": "1",
+    "commands": {
+        "start": "node ./bin/www",
+        "docker:build": "docker build -t portal:local .",
+        "k8s:deploy": "kubectl apply -f k8s/deployment.yaml",
+        "k8s:destroy": "kubectl delete -f k8s/deployment.yaml"
+    }
+}
