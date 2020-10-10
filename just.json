@@ -5,7 +5,8 @@
         "update:version:major": "node tasks/update-version.js --major",
         "update:version:minor": "node tasks/update-version.js --minor",
         "update:version:patch": "node tasks/update-version.js --patch",
-        "docker:build": "docker build -t portal:local .",
+        "!docker:build": "docker build -t portal:$(node tasks/get-version.js) .",
+        "!k8s:update:deployment": "VERSION=$(node tasks/get-version.js) envsubst < k8s/template.deployment.yaml > k8s/deployment.yaml",
         "k8s:deploy": "kubectl apply -f k8s/deployment.yaml",
         "k8s:destroy": "kubectl delete -f k8s/deployment.yaml"
     }
