@@ -1,6 +1,7 @@
 {
     "version": "1",
     "commands": {
+        "!git:tag": "git tag v`node tasks/get-version.js`",
         "start": "node ./bin/www",
         "update:version:major": "node tasks/update-version.js --major",
         "update:version:minor": "node tasks/update-version.js --minor",
