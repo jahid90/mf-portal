@@ -5,7 +5,7 @@ const endpoint = process.env.NAVIGATION_SERVICE;
 const getHeader = async () => {
     try {
 
-        const url = `http://${endpoint}/header`;
+        const url = `http://${endpoint}/component/header`;
 
         const response = await axios.get(url);
 
