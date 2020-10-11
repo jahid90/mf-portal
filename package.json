@@ -1,14 +1,15 @@
 {
   "name": "portal",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
-    "git:tag" : "git tag v`node tasks/get-version.js`",
+    "git:tag": "git tag v`node tasks/get-version.js`",
     "start": "DEBUG=portal:* node ./bin/www",
     "docker:build": "docker build -t portal:$(node tasks/get-version.js) .",
     "k8s:update:deployment": "VERSION=$(node tasks/get-version.js) envsubst < k8s/template.deployment.yaml > k8s/deployment.yaml"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",

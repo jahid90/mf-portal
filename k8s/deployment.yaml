@@ -16,16 +16,23 @@ spec:
     spec:
       containers:
       - name: portal
-        image: portal:0.2.0
+        image: portal:0.3.0
         ports:
           - containerPort: 80
         env:
         - name: PORT
           value: "80"
         - name: NODE_ENV
-          value: "production"
+          value: production
         - name: VERSION
-          value: 0.2.0
+          value: "0.3.0"
+        - name: NAVIGATION_SERVICE
+          valueFrom:
+            configMapKeyRef:
+              name: micro-frontend
+              key: navigation-server
+        - name: GET_HOSTS_FROM
+          value: dns
         resources:
           requests:
             memory: "64Mi"

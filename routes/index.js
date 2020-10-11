@@ -1,9 +1,23 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
+const navigationService = require('../services/navigation');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', version: process.env.VERSION || '0.0.0' });
+router.get('/', async (req, res, next) => {
+  try {
+    const headerContent = await navigationService.getHeader();
+
+    res.render('index',
+      {
+        title: 'Express',
+        version: process.env.VERSION || '0.0.0',
+        header: headerContent
+      }
+    );
+  } catch (err) {
+    throw err;
+  }
 });
 
 module.exports = router;

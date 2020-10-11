@@ -23,9 +23,16 @@ spec:
         - name: PORT
           value: "80"
         - name: NODE_ENV
-          value: "production"
+          value: production
         - name: VERSION
-          value: $VERSION
+          value: "$VERSION"
+        - name: NAVIGATION_SERVICE
+          valueFrom:
+            configMapKeyRef:
+              name: micro-frontend
+              key: navigation-server
+        - name: GET_HOSTS_FROM
+          value: dns
         resources:
           requests:
             memory: "64Mi"
