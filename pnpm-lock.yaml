@@ -4228,6 +4228,6 @@ specifiers:
   ejs: 2.6.2
   express: 4.16.4
   http-errors: 1.6.3
-  jest: ^26.5.3
+  jest: 26.5.3
   morgan: 1.9.1
-  supertest: ^5.0.0
+  supertest: 5.0.0
