@@ -7,12 +7,13 @@ const navigationService = require('../services/navigation');
 router.get('/', async (req, res, next) => {
   try {
     const headerContent = await navigationService.getHeader();
+    const footerContent = await navigationService.getFooter();
 
     res.render('index',
       {
         title: 'Express',
-        version: process.env.VERSION || '0.0.0',
-        header: headerContent
+        header: headerContent,
+        footer: footerContent
       }
     );
   } catch (err) {
