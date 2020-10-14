@@ -22,7 +22,7 @@ const verifyArgs = () => {
 
 const showHelp = () => {
     console.log(`
-update-version.js Updates the version in package.json
+update-version.js Updates the version in .app-metadata.json
 
 Usage: node update-version.js [--major] [--minor] [--patch]
 
@@ -33,22 +33,22 @@ Usage: node update-version.js [--major] [--minor] [--patch]
 };
 
 const incrementVersion = (type) => {
-    const package = require('../package.json');
+    const appMetadata = require('../.app-metadata.json');
 
     switch (type) {
         case "--major":
-            package.version = nextVersion(package.version, type);
-            writePackageJsonFile(package);
+            appMetadata.version = nextVersion(appMetadata.version, type);
+            writeappMetadataJsonFile(appMetadata);
             break;
 
         case "--minor":
-            package.version = nextVersion(package.version, type);
-            writePackageJsonFile(package);
+            appMetadata.version = nextVersion(appMetadata.version, type);
+            writeappMetadataJsonFile(appMetadata);
             break;
 
         case "--patch":
-            package.version = nextVersion(package.version, type);
-            writePackageJsonFile(package);
+            appMetadata.version = nextVersion(appMetadata.version, type);
+            writeappMetadataJsonFile(appMetadata);
             break;
 
         default:
@@ -85,16 +85,16 @@ const nextVersion = (currentVersion, type) => {
     return `${major}.${minor}.${patch}`;
 }
 
-const writePackageJsonFile = (packageJson) => {
+const writeappMetadataJsonFile = (appMetadataJson) => {
     const fs = require('fs');
-    const data = JSON.stringify(packageJson, null, 2);
+    const data = JSON.stringify(appMetadataJson, null, 2);
 
-    fs.writeFile('./package.json', data + '\n', (err) => {
+    fs.writeFile('./.app-metadata.json', data + '\n', (err) => {
         if (err) {
             throw err;
         }
 
-        console.log(`package.json update with new version: ${packageJson.version}`);
+        console.log(`.app-metadata.json update with new version: ${appMetadataJson.version}`);
     });
 }
 

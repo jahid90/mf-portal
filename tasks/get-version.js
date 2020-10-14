@@ -1,3 +1,3 @@
-const package = require('../package.json');
+const appMetadata = require('../.app-metadata.json');
 
-console.log(package.version);
+console.log(appMetadata.version);
