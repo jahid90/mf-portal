@@ -4251,7 +4251,7 @@ packages:
     resolution:
       integrity: sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==
 specifiers:
-  '@jahid90/package': ^1.0.1
+  '@jahid90/package': 1.0.1
   axios: 0.20.0
   cookie-parser: 1.4.5
   debug: 2.6.9
