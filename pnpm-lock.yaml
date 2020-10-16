@@ -1,7 +1,7 @@
 dependencies:
   axios: 0.20.0
   cookie-parser: 1.4.5
-  debug: 2.6.9
+  debug: 4.2.0
   ejs: 2.7.4
   express: 4.17.1
   http-errors: 1.8.0
@@ -1190,7 +1190,6 @@ packages:
   /debug/4.2.0:
     dependencies:
       ms: 2.1.2
-    dev: true
     engines:
       node: '>=6.0'
     peerDependencies:
@@ -2872,7 +2871,6 @@ packages:
     resolution:
       integrity: sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
   /ms/2.1.2:
-    dev: true
     resolution:
       integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
   /nanomatch/1.2.13:
@@ -4254,7 +4252,7 @@ specifiers:
   '@jahid90/package': 1.0.1
   axios: 0.20.0
   cookie-parser: 1.4.5
-  debug: 2.6.9
+  debug: 4.2.0
   ejs: 2.7.4
   express: 4.17.1
   http-errors: 1.8.0
