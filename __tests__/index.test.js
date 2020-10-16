@@ -23,12 +23,14 @@ describe('Index Route Tests', () => {
 
             const app = require('../app');
             jest.mock('../services/navigation', () => ({
-                getHeader: () => '<nav>awesome header</nav>'
+                getHeader: () => '<nav>awesome header</nav>',
+                getFooter: () => '<div>a footer</div>'
             }));
 
             const res = await request(app).get('/');
 
             expect(res.text).toContain('awesome header');
+            expect(res.text).toContain('a footer')
 
         });
     });
