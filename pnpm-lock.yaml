@@ -4365,7 +4365,7 @@ specifiers:
   ejs: 2.7.4
   express: 4.17.1
   http-errors: 1.8.0
-  husky: ^4.3.0
+  husky: 4.3.0
   jest: 26.5.3
   morgan: 1.10.0
   supertest: 5.0.0
