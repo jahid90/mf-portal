@@ -14,7 +14,7 @@
     "k8s:update:deployment": "VERSION=$(node tasks/get-version.js) envsubst < k8s/template.deployment.yaml > k8s/deployment.yaml"
   },
   "dependencies": {
-    "axios": "0.20.0",
+    "axios": "0.21.0",
     "cookie-parser": "1.4.5",
     "debug": "4.2.0",
     "ejs": "3.1.5",
